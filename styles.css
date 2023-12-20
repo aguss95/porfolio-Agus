@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 .header {
@@ -39,14 +40,16 @@
   align-items: center;
 }
 
-details {
-  background-color:#1f042249;
-  border: 1px solid #ddd; /* Borde para el contenedor */
-  padding: 10px; /* Espaciado interno */
-  margin: 10px 0; /* Margen externo */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el contenedor */
-  transition: background-color 0.3s, color 0.3s; /* Agrega una transición suave al efecto hover */
-}
+
+
+/*details {*/
+/*  */
+/*  ; /* Borde para el contenedor*/
+/*  padding: 10px; /* Espaciado interno */
+/*  margin: 10px 0; /* Margen externo */
+/*   /* Cambia el cursor al pasar sobre el contenedor */
+/*  */ /* Agrega una transición suave al efecto hover */
+/*}*/
 
 /* Estilo para el contenido dentro de summary */
 summary {
@@ -57,6 +60,14 @@ summary {
 details[open] {
   background-color: #f9f9f9; /* Cambia el color de fondo cuando está abierto */
 }
+
+/*.details__InfoPersonal {
+  display: grid;
+  grid-column: auto;
+  justify-content: center;
+
+
+}*/
 
 .section1 {
   margin: 15px;
@@ -88,3 +99,70 @@ details[open] {
   background-color: #231f20;
 }
   
+details {
+  background-color:#1f042249;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 10px;
+  max-width: 400px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+details ul {
+  list-style-type: none;
+  margin-top: none;
+}
+
+details li {
+  padding-top: 30px;
+}
+
+.credential {
+  display: flex;
+  align-items: center;
+}
+
+.credential ul {
+  list-style-type: none;
+
+}
+
+.credential img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.columns {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  margin-bottom: 5px;
+}
+
+
+@media (max-width: 600px) {
+  .columns {
+    flex-direction: column;
+  }
+}
+
+.icon-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
